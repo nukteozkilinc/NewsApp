@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.favorite.FavoriteFragment">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp">
+
+            <TextView
+                android:id="@+id/titleDetail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Leak: Samsung to announce the Z Fold 3 and Galaxy Watch 4 in August"
+                android:textSize="20sp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="23dp"
+                android:textColor="@color/amber_black"
+                android:fontFamily="sans-serif"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageDetail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/rectangle_16"
+                app:layout_constraintTop_toBottomOf="@id/shareButton"
+                android:layout_margin="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="24dp" />
+
+            <TextView
+                android:id="@+id/contentDetail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Samsung had a pretty quiet Mobile World Congress event, but it did tell us we’d learn more about its upcoming Google-approved smartwatch at its next Unpacked event. Unfortunately, the company didn’t tell us when exactly that would be, but a new report from Korean publication DigitalDaily News (via 9to5Google) claims the next Unpacked will take place on August 11, at 10 AM ET.
+"
+                android:textSize="17sp"
+                app:layout_constraintStart_toStartOf="@id/titleDetail"
+                app:layout_constraintEnd_toEndOf="@id/titleDetail"
+                app:layout_constraintTop_toBottomOf="@id/imageDetail"
+                android:layout_marginTop="35dp"
+                android:fontFamily="sans-serif"
+                android:alpha="0.6"
+                android:textColor="@color/amber_black" />
+
+            <TextView
+                android:id="@+id/dateDetail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="17/07/2000"
+                android:textColor="@color/amber_black"
+                android:alpha="0.4"
+                app:layout_constraintTop_toBottomOf="@id/contentDetail"
+                android:layout_marginTop="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="91dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="91dp"
+                android:gravity="center"
+                android:fontFamily="sans-serif" />
+
+            <ImageView
+                android:id="@+id/shareButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/share"
+                app:layout_constraintStart_toStartOf="@id/titleDetail"
+                app:layout_constraintTop_toBottomOf="@id/titleDetail"
+                android:layout_marginTop="11dp" />
+
+            <com.github.ivbaranov.mfb.MaterialFavoriteButton
+                android:id="@+id/save_button"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                app:mfb_animate_favorite="true"
+                app:mfb_animate_unfavorite="false"
+                app:mfb_bounce_duration="300"
+                app:mfb_favorite_image="@drawable/ic_heart_filled"
+                app:mfb_not_favorite_image="@drawable/ic_heart"
+                app:mfb_padding="12"
+                app:mfb_rotation_angle="360"
+                app:mfb_rotation_duration="400"
+                app:mfb_size="45"
+                app:mfb_type="heart"
+                app:layout_constraintEnd_toEndOf="@id/contentDetail"
+                app:layout_constraintTop_toBottomOf="@id/dateDetail"
+                android:layout_marginTop="11dp"
+
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

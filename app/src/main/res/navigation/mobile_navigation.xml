@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.nukte.denemedeneme.ui.home.HomeFragment"
+        android:label="Home Page"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_navigation_home_to_detailScreen"
+            app:destination="@id/detailScreen" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_favorite"
+            app:destination="@id/navigation_favorite" />
+        <action
+            android:id="@+id/action_navigation_home_to_searchFragment"
+            app:destination="@id/searchFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_favorite"
+        android:name="com.nukte.denemedeneme.ui.favorite.FavoriteFragment"
+        android:label="Favories"
+        tools:layout="@layout/fragment_favorite">
+        <action
+            android:id="@+id/action_navigation_favorite_to_detailScreen"
+            app:destination="@id/detailScreen" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/detailScreen"
+        android:name="com.nukte.denemedeneme.ui.detail.DetailScreen"
+        android:label="Detail Screen"
+        tools:layout="@layout/detail_screen_fragment">
+        <argument
+            android:name="news"
+            app:argType="com.nukte.denemedeneme.model.News" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.nukte.denemedeneme.ui.search.SearchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchFragment_to_detailScreen"
+            app:destination="@id/detailScreen" />
+    </fragment>
+</navigation>

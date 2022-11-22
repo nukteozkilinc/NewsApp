@@ -1,0 +1,70 @@
+plugins {
+    alias libs.plugins.android.application
+    alias libs.plugins.kotlin.android
+    alias libs.plugins.hilt.plugin
+    alias libs.plugins.kotlin.kapt
+    alias libs.plugins.kotlin.serialization
+    alias libs.plugins.safe.args
+
+}
+android {
+    compileSdkVersion 32
+
+    defaultConfig {
+        applicationId "com.nukte.denemedeneme"
+        minSdkVersion 24
+        targetSdkVersion 32
+        versionCode 2
+        versionName "1.0"
+
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    buildFeatures {
+        viewBinding = true
+        dataBinding = true
+    }
+}
+
+dependencies {
+    implementation project(":data")
+
+    implementation 'androidx.core:core-ktx:1.8.0'
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation libs.material
+    implementation libs.constraintlayout
+    implementation libs.retrofit
+    implementation libs.convertor
+    implementation libs.bundles.coroutines
+    implementation libs.bundles.okhttp
+    implementation libs.bundles.lifecycle
+    implementation libs.bundles.navigation
+    implementation libs.dagger
+    implementation libs.bundles.glide
+    implementation libs.serialization
+    implementation libs.legacysupport
+    kapt libs.bundles.hilt
+    implementation libs.bundles.room
+    implementation libs.materialfavbutton
+    implementation libs.cardview
+    implementation libs.paging
+    implementation libs.swiperefresh
+    implementation libs.databindingruntime
+
+}

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="4dp"
+    android:layout_marginStart="18dp"
+    android:layout_marginEnd="14dp"
+    android:layout_marginTop="23dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="3dp"
+            app:layout_constraintBottom_toTopOf="@id/save_button"
+            app:layout_constraintCircleRadius="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/titleText"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/titleText"
+            android:text="Battlegrounds Mobile India iOS release date"
+            android:textColor="@color/navy_blue"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/imageView"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="1dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginStart="24dp"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/descriptionText"
+            android:text="The reason behind their disappointment is that iPhone users have been.."
+            android:textColor="@color/navy_blue"
+            android:textSize="14sp"
+            android:alpha="0.6"
+            app:layout_constraintStart_toStartOf="@id/titleText"
+            app:layout_constraintEnd_toEndOf="@id/titleText"
+            app:layout_constraintTop_toBottomOf="@id/titleText"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="1dp"
+            />
+
+        <TextView
+            android:id="@+id/publishedAt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:alpha="0.4"
+            android:text="42 mins ago"
+            android:textColor="@color/navy_blue"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/titleText"
+            app:layout_constraintTop_toBottomOf="@id/descriptionText"
+            android:layout_marginBottom="13dp"
+            />
+
+        <com.github.ivbaranov.mfb.MaterialFavoriteButton
+            android:id="@+id/save_button"
+            android:layout_width="78dp"
+            android:layout_height="69dp"
+            app:mfb_animate_favorite="true"
+            app:mfb_animate_unfavorite="false"
+            app:mfb_bounce_duration="300"
+            app:mfb_favorite_image="@drawable/ic_heart_filled"
+            app:mfb_not_favorite_image="@drawable/ic_heart"
+            app:mfb_padding="12"
+            app:mfb_rotation_angle="360"
+            app:mfb_rotation_duration="400"
+            app:mfb_size="55"
+            app:mfb_type="heart"
+            tools:layout_editor_absoluteX="315dp"
+            tools:layout_editor_absoluteY="162dp"
+            app:layout_constraintStart_toEndOf="@id/descriptionText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/descriptionText"
+            android:layout_marginTop="23dp"
+            android:layout_marginEnd="37dp"
+            android:layout_marginStart="87dp"
+            android:layout_marginBottom="16dp"
+            />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

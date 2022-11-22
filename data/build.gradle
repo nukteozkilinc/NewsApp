@@ -1,0 +1,49 @@
+plugins {
+    alias libs.plugins.android.library
+    alias libs.plugins.kotlin.android
+    alias libs.plugins.hilt.plugin
+    alias libs.plugins.kotlin.kapt
+    alias libs.plugins.kotlin.serialization
+}
+
+
+android {
+    namespace = "com.nukte.denemedeneme"
+    compileSdkVersion 32
+
+    defaultConfig {
+        minSdkVersion 24
+        targetSdkVersion 32
+
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
+        }
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    dependencies {
+        implementation libs.retrofit
+        implementation libs.convertor
+        implementation libs.bundles.okhttp
+        implementation libs.dagger
+        implementation libs.serialization
+        implementation libs.paging
+        kapt libs.bundles.hilt
+        implementation libs.bundles.room
+        kapt libs.roomcompiler
+        implementation libs.databindingruntime
+    }
+}
